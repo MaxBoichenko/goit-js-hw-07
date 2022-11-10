@@ -1,8 +1,5 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-
-console.log(galleryItems);
-
 const containerGallery = document.querySelector('.gallery');
 
 containerGallery.innerHTML = galleryItems
@@ -12,3 +9,7 @@ containerGallery.innerHTML = galleryItems
 </a>`;
   })
   .join('');
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
